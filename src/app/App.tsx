@@ -3,8 +3,9 @@ import { Hero } from "./components/Hero";
 import { LeadBy } from "./components/LeadBy";
 import { WhatWeDo } from "./components/WhatWeDo";
 import { About } from "./components/About";
-import { Products } from "./components/Products";
 import { Services } from "./components/Services";
+import { ProductsIndex } from "./pages/ProductsIndex";
+import { CategoryPage } from "./pages/CategoryPage";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { useEffect } from "react";
@@ -38,7 +39,6 @@ function Home() {
       <LeadBy />
       <WhatWeDo />
       <About />
-      <Products />
       <Services />
       <Contact />
     </>
@@ -66,6 +66,8 @@ export default function App() {
         <Route path="/news" element={<News />} />
         <Route path="/enquiry" element={<Enquiry />} />
         <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/products" element={<ProductsIndex />} />
+        <Route path="/products/:categorySlug" element={<CategoryPage />} />
         </Routes>
         <Footer />
       </div>
