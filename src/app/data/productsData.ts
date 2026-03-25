@@ -1,10 +1,31 @@
+// Helper to create consistent product objects
+const createProduct = (name: string, categorySlug: string, imageFolder: string): Product => ({
+  name,
+  slug: name.toLowerCase().replace(/[\s&/]+/g, '-'),
+  categorySlug,
+  description: `Premium industrial ${name.toLowerCase()} engineered for maximum durability, reliability, and B2B scale operations. Manufactured strictly to global quality standards.`,
+  images: [
+    `/images/${imageFolder}/${name.toLowerCase().replace(/[\s&/]+/g, '-')}-1.jpg`,
+    `/images/${imageFolder}/${name.toLowerCase().replace(/[\s&/]+/g, '-')}-2.jpg`,
+    `/images/${imageFolder}/${name.toLowerCase().replace(/[\s&/]+/g, '-')}-3.jpg`
+  ]
+});
+
+export interface Product {
+  name: string;
+  slug: string;
+  categorySlug: string;
+  images: string[];
+  description: string;
+}
+
 export interface CategoryData {
   id: string;
   icon: string;
   name: string;
   desc: string;
-  items?: string[];
-  sections?: { title: string; items: string[] }[];
+  items?: Product[];
+  sections?: { title: string; items: Product[] }[];
 }
 
 export const categoriesData: CategoryData[] = [
@@ -14,12 +35,12 @@ export const categoriesData: CategoryData[] = [
     name: "MS Fabrication & Rubber Lining",
     desc: "Mild steel fabrications with high-grade rubber lining for industrial durability.",
     items: [
-      "MSRL Rubber Lining",
-      "MSRL Tanks & Vessels",
-      "MSRL Pipes & Fittings",
-      "MSRL Ductings",
-      "MSRL Rollers",
-      "MSRL Sandmill Rotor & Stator"
+      createProduct("MSRL Rubber Lining", "ms-fabrication-rubber-lining", "msrl"),
+      createProduct("MSRL Tanks & Vessels", "ms-fabrication-rubber-lining", "msrl"),
+      createProduct("MSRL Pipes & Fittings", "ms-fabrication-rubber-lining", "msrl"),
+      createProduct("MSRL Ductings", "ms-fabrication-rubber-lining", "msrl"),
+      createProduct("MSRL Rollers", "ms-fabrication-rubber-lining", "msrl"),
+      createProduct("MSRL Sandmill Rotor & Stator", "ms-fabrication-rubber-lining", "msrl")
     ]
   },
   {
@@ -28,7 +49,7 @@ export const categoriesData: CategoryData[] = [
     name: "Site Rubber Lining & Projects",
     desc: "On-site rubber lining services and complete turnkey project solutions.",
     items: [
-      "Rubber Lining & Projects"
+      createProduct("Rubber Lining & Projects", "site-rubber-lining-projects", "site")
     ]
   },
   {
@@ -37,14 +58,14 @@ export const categoriesData: CategoryData[] = [
     name: "MSFE Project Equipment & Products",
     desc: "Engineered process equipment for chemical, mineral, and industrial applications.",
     items: [
-      "Tube Holder Plates",
-      "Heater Shells and Evaporators",
-      "Sand Filters",
-      "Cyclone Separators",
-      "Star Rollers",
-      "Intel & Flash Nozzles",
-      "Pipes & Fittings",
-      "Rubber Gaskets & O-rings / Seal rings"
+      createProduct("Tube Holder Plates", "msfe-project-equipment-products", "equipment"),
+      createProduct("Heater Shells and Evaporators", "msfe-project-equipment-products", "equipment"),
+      createProduct("Sand Filters", "msfe-project-equipment-products", "equipment"),
+      createProduct("Cyclone Separators", "msfe-project-equipment-products", "equipment"),
+      createProduct("Star Rollers", "msfe-project-equipment-products", "equipment"),
+      createProduct("Intel & Flash Nozzles", "msfe-project-equipment-products", "equipment"),
+      createProduct("Pipes & Fittings", "msfe-project-equipment-products", "equipment"),
+      createProduct("Rubber Gaskets & O-rings / Seal rings", "msfe-project-equipment-products", "equipment")
     ]
   },
   {
@@ -53,10 +74,10 @@ export const categoriesData: CategoryData[] = [
     name: "Pulley Laggings",
     desc: "High-performance pulley lagging solutions for conveyor systems.",
     items: [
-      "Plain",
-      "Grooved",
-      "Herringbone",
-      "Ceramic"
+      createProduct("Plain", "pulley-laggings", "pulleys"),
+      createProduct("Grooved", "pulley-laggings", "pulleys"),
+      createProduct("Herringbone", "pulley-laggings", "pulleys"),
+      createProduct("Ceramic", "pulley-laggings", "pulleys")
     ]
   },
   {
@@ -65,10 +86,10 @@ export const categoriesData: CategoryData[] = [
     name: "Hoses",
     desc: "Industrial hoses engineered for chemical transfer, dredging, and expansion applications.",
     items: [
-      "Acid Transfer",
-      "Chemical Transfer",
-      "Dredging",
-      "Rubber Expansion Joints / Bellows"
+      createProduct("Acid Transfer", "hoses", "hoses"),
+      createProduct("Chemical Transfer", "hoses", "hoses"),
+      createProduct("Dredging", "hoses", "hoses"),
+      createProduct("Rubber Expansion Joints / Bellows", "hoses", "hoses")
     ]
   },
   {
@@ -77,9 +98,9 @@ export const categoriesData: CategoryData[] = [
     name: "Moulded Products",
     desc: "Precision moulded rubber components for sealing and vibration isolation.",
     items: [
-      "O Rings",
-      "Gaskets",
-      "Buffers"
+      createProduct("O Rings", "moulded-products", "moulded"),
+      createProduct("Gaskets", "moulded-products", "moulded"),
+      createProduct("Buffers", "moulded-products", "moulded")
     ]
   },
   {
@@ -88,8 +109,8 @@ export const categoriesData: CategoryData[] = [
     name: "Rubbers",
     desc: "Speciality rubber grades and professional lining services.",
     items: [
-      "Grades",
-      "Lining Services"
+      createProduct("Grades", "rubbers", "rubbers"),
+      createProduct("Lining Services", "rubbers", "rubbers")
     ]
   },
   {
@@ -100,23 +121,52 @@ export const categoriesData: CategoryData[] = [
     sections: [
       {
         title: "Turn-Key Projects",
-        items: ["Fuel Handling Systems", "Ash Handling Systems"]
+        items: [
+          createProduct("Fuel Handling Systems", "material-handling", "material"),
+          createProduct("Ash Handling Systems", "material-handling", "material")
+        ]
       },
       {
         title: "Conveyors",
-        items: ["Belt", "Shuttle", "Tripper", "Screw", "Side-Wall Belt", "Slat Chain", "Portable Bag"]
+        items: [
+          createProduct("Belt", "material-handling", "material"),
+          createProduct("Shuttle", "material-handling", "material"),
+          createProduct("Tripper", "material-handling", "material"),
+          createProduct("Screw", "material-handling", "material"),
+          createProduct("Side-Wall Belt", "material-handling", "material"),
+          createProduct("Slat Chain", "material-handling", "material"),
+          createProduct("Portable Bag", "material-handling", "material")
+        ]
       },
       {
         title: "Feeders",
-        items: ["Drag Chain", "Belt", "Screw"]
+        items: [
+          createProduct("Drag Chain", "material-handling", "material"),
+          createProduct("Belt", "material-handling", "material"),
+          createProduct("Screw", "material-handling", "material")
+        ]
       },
       {
         title: "Spares",
-        items: ["Idlers", "Pulleys", "Internal Scrapper", "External Scrapper", "Rack and Pinion Gate", "Rod Gate", "Screw Gate"]
+        items: [
+          createProduct("Idlers", "material-handling", "material"),
+          createProduct("Pulleys", "material-handling", "material"),
+          createProduct("Internal Scrapper", "material-handling", "material"),
+          createProduct("External Scrapper", "material-handling", "material"),
+          createProduct("Rack and Pinion Gate", "material-handling", "material"),
+          createProduct("Rod Gate", "material-handling", "material"),
+          createProduct("Screw Gate", "material-handling", "material")
+        ]
       },
       {
         title: "Others",
-        items: ["Bucket Elevator", "Vibrating Feeder", "Vibrating Screen (Circular & Linear)", "Crusher (Hammer Mills)", "Mild & Stainless Steel Fabrications"]
+        items: [
+          createProduct("Bucket Elevator", "material-handling", "material"),
+          createProduct("Vibrating Feeder", "material-handling", "material"),
+          createProduct("Vibrating Screen (Circular & Linear)", "material-handling", "material"),
+          createProduct("Crusher (Hammer Mills)", "material-handling", "material"),
+          createProduct("Mild & Stainless Steel Fabrications", "material-handling", "material")
+        ]
       }
     ]
   }

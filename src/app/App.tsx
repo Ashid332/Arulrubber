@@ -6,6 +6,7 @@ import { About } from "./components/About";
 import { Services } from "./components/Services";
 import { ProductsIndex } from "./pages/ProductsIndex";
 import { CategoryPage } from "./pages/CategoryPage";
+import { ProductDetail } from "./pages/ProductDetail";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { useEffect } from "react";
@@ -68,6 +69,7 @@ export default function App() {
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/products" element={<ProductsIndex />} />
         <Route path="/products/:categorySlug" element={<CategoryPage />} />
+        <Route path="/products/:categorySlug/:productSlug" element={<ProductDetail />} />
         </Routes>
         <Footer />
       </div>
