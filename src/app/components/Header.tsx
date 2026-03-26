@@ -53,12 +53,12 @@ export function Header() {
                     {item}
                   </Link>
                 ) : (
-                  <a
-                    href={item === "About Us" ? "/corporate-info" : item === "Industries" ? "/industries" : item === "Facilities" ? "/facilities" : item === "R & D" ? "/research-and-development" : item === "Clients" ? "/clients" : item === "News" ? "/news" : item === "Enquiry" ? "/enquiry" : item === "Contact Us" ? "/contact-us" : `#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                  <Link
+                    to={item === "About Us" ? "/corporate-info" : item === "Industries" ? "/industries" : item === "Facilities" ? "/facilities" : item === "R & D" ? "/research-and-development" : item === "Clients" ? "/clients" : item === "News" ? "/news" : item === "Enquiry" ? "/enquiry" : item === "Contact Us" ? "/contact-us" : `#${item.toLowerCase().replace(/\s+/g, '-')}`}
                     className="text-white hover:text-red-400 transition-colors duration-300 py-2 inline-block font-medium uppercase text-xs"
                   >
                     {item}
-                  </a>
+                  </Link>
                 )}
                 
                 {item === "About Us" && (
@@ -112,16 +112,19 @@ export function Header() {
                       {item}
                     </Link>
                   ) : (
-                    <motion.a
-                      href={item === "About Us" ? "/corporate-info" : item === "Industries" ? "/industries" : item === "Facilities" ? "/facilities" : item === "R & D" ? "/research-and-development" : item === "Clients" ? "/clients" : item === "News" ? "/news" : item === "Enquiry" ? "/enquiry" : item === "Contact Us" ? "/contact-us" : `#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    <motion.div
                       initial={{ x: -20, opacity: 0 }}
                       animate={{ x: 0, opacity: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="block py-2 text-white hover:text-red-400 transition-colors duration-300"
-                      onClick={() => setIsMenuOpen(false)}
                     >
-                      {item}
-                    </motion.a>
+                      <Link
+                        to={item === "About Us" ? "/corporate-info" : item === "Industries" ? "/industries" : item === "Facilities" ? "/facilities" : item === "R & D" ? "/research-and-development" : item === "Clients" ? "/clients" : item === "News" ? "/news" : item === "Enquiry" ? "/enquiry" : item === "Contact Us" ? "/contact-us" : `#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="block py-2 text-white hover:text-red-400 transition-colors duration-300"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {item}
+                      </Link>
+                    </motion.div>
                   )}
                 </div>
               ))}
