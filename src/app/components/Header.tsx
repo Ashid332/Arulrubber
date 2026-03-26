@@ -24,19 +24,19 @@ export function Header() {
       className="bg-[#1e3a8a] text-white sticky top-0 z-50 shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="flex items-center"
+            className="flex items-center shrink-0"
           >
             <Link to="/">
               <img 
                 src="/images/arul-rubbers-logo.png" 
                 alt="Arul Rubbers Private Limited" 
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-[50px] md:h-[70px] w-auto object-contain"
               />
             </Link>
           </motion.div>
