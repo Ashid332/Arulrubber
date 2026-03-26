@@ -15,6 +15,9 @@ export interface CategoryData {
   sections?: { title: string; items: Product[] }[];
 }
 
+// Real images sourced from arulrubbers.com
+const ARUL = "https://www.arulrubbers.com/images/products";
+
 export const categoriesData: CategoryData[] = [
   {
     id: "ms-fabrication-rubber-lining",
@@ -28,9 +31,10 @@ export const categoriesData: CategoryData[] = [
         categorySlug: "ms-fabrication-rubber-lining",
         description: "High-performance rubber lining applied to mild steel structures for superior chemical resistance, abrasion protection, and extended equipment life in demanding industrial environments.",
         images: [
-          "/images/msrl/rubber-lining.png",
-          "/images/factory_building.png",
-          "/images/site_rubber_lining.png"
+          `${ARUL}/msrl-rubber-lining/MSRL_saturator_inside_rubber_lined.jpg`,
+          `${ARUL}/msrl-rubber-lining/MSRL_saturator_outside_rubber_lined.jpg`,
+          `${ARUL}/msrl-rubber-lining/MS_Fabricated_tanks.jpg`,
+          `${ARUL}/msrl-rubber-lining/nuclear-power-plant-tank-with-inside-rubber-lining--exterior-FRP.jpg`
         ]
       },
       {
@@ -39,9 +43,10 @@ export const categoriesData: CategoryData[] = [
         categorySlug: "ms-fabrication-rubber-lining",
         description: "Rubber-lined industrial tanks and pressure vessels designed for chemical storage, acid processing, and corrosive fluid containment across heavy industries.",
         images: [
-          "/images/msrl/tanks-vessels.png",
-          "/images/msrl/rubber-lining.png",
-          "/images/factory_building.png"
+          `${ARUL}/msrl-tanks-and-vessels/MSRL_HCL_tank.jpg`,
+          `${ARUL}/msrl-tanks-and-vessels/MSRL_special_purpose_tank.jpg`,
+          `${ARUL}/msrl-tanks-and-vessels/MSRL_tank_1.jpg`,
+          `${ARUL}/msrl-tanks-and-vessels/MSRL_high_temperature_resitant_evaporator.jpg`
         ]
       },
       {
@@ -50,9 +55,9 @@ export const categoriesData: CategoryData[] = [
         categorySlug: "ms-fabrication-rubber-lining",
         description: "Precision rubber-lined pipes and fittings engineered for corrosion-free transfer of acids, chemicals, and slurries in processing plants.",
         images: [
-          "/images/msrl/pipes-fittings.png",
-          "/images/msrl/rubber-lining.png",
-          "/images/msrl/tanks-vessels.png"
+          `${ARUL}/msrl-pipes-and-fittings/hydro_test_of_pipes_and_fittings.jpg`,
+          `${ARUL}/msrl-pipes-and-fittings/special_exterior_painting_fittings.jpg`,
+          `${ARUL}/msrl-pipes-and-fittings/special_exterior_painting_pipes.jpg`
         ]
       },
       {
@@ -61,9 +66,9 @@ export const categoriesData: CategoryData[] = [
         categorySlug: "ms-fabrication-rubber-lining",
         description: "Rubber-lined ducting systems built for safe transport of corrosive gases and fumes in chemical, pharmaceutical, and power generation industries.",
         images: [
-          "/images/msrl/pipes-fittings.png",
-          "/images/msrl/rubber-lining.png",
-          "/images/factory_building.png"
+          `${ARUL}/msrl-rubber-lining/fabricated_saturator.jpg`,
+          `${ARUL}/msrl-rubber-lining/MSRL_saturator_with_exterior_adhesive_coating_ready_for_rubber_lining.jpg`,
+          `${ARUL}/msrl-rubber-lining/MS_fabricated_HCL_tank_2.jpg`
         ]
       },
       {
@@ -72,9 +77,9 @@ export const categoriesData: CategoryData[] = [
         categorySlug: "ms-fabrication-rubber-lining",
         description: "Heavy-duty rubber-coated steel rollers designed for conveyor systems, printing, and industrial processing with excellent wear resistance.",
         images: [
-          "/images/msrl/rollers.png",
-          "/images/msrl/rubber-lining.png",
-          "/images/pulleys/pulley-lagging.png"
+          `${ARUL}/msrl-rollers/msrl_rollers.jpg`,
+          `${ARUL}/msrl-rubber-lining/valve.jpg`,
+          `${ARUL}/msrl-rubber-lining/progen_tank_of_rubber_lined_filter_plate.jpg`
         ]
       },
       {
@@ -83,9 +88,9 @@ export const categoriesData: CategoryData[] = [
         categorySlug: "ms-fabrication-rubber-lining",
         description: "Precision-engineered sandmill rotor and stator assemblies with rubber lining for paint, ink, and chemical grinding applications.",
         images: [
-          "/images/msrl/sandmill.png",
-          "/images/equipment/cyclone-separator.png",
-          "/images/msrl/rubber-lining.png"
+          `${ARUL}/msrl-rubber-lining/progen_tank_for_BGR.jpg`,
+          `${ARUL}/msrl-rubber-lining/phophoric-tank-fabrication-at-site-for-FACT-Kerala.jpg`,
+          `${ARUL}/msrl-rubber-lining/MS_fabricated_HCL_tank_3.jpg`
         ]
       }
     ]
@@ -100,11 +105,12 @@ export const categoriesData: CategoryData[] = [
         name: "Rubber Lining & Projects",
         slug: "rubber-lining-projects",
         categorySlug: "site-rubber-lining-projects",
-        description: "Comprehensive on-site rubber lining installation for existing tanks, vessels, pipes, and industrial equipment, with full project management and quality assurance.",
+        description: "Comprehensive on-site rubber lining installation for tanks, vessels, pipes, and industrial equipment with full project management and quality assurance.",
         images: [
-          "/images/site/site-rubber-lining.png",
-          "/images/site_rubber_lining.png",
-          "/images/msrl/rubber-lining.png"
+          `${ARUL}/site-rubber-lining/FACT-Kerala-Phosphoric-Acid-Tank-rubber-lined-at-site.jpg`,
+          `${ARUL}/site-rubber-lining/PPL-Site-project-pictures-of-tanks-rubber-lined-by-Arul-Rubbers.jpg`,
+          `${ARUL}/site-rubber-lining/Site-rubber-lined-tank.jpg`,
+          `${ARUL}/site-rubber-lining/SPV-Indonesia-MSFE-Project-01.jpg`
         ]
       }
     ]
@@ -133,14 +139,14 @@ export const categoriesData: CategoryData[] = [
         name: "Sand Filters",
         slug: "sand-filters",
         categorySlug: "msfe-project-equipment-products",
-        description: "Industrial sand filtration systems for water treatment and process fluid purification in manufacturing environments.",
+        description: "Industrial sand filtration systems for water treatment and process fluid purification.",
         images: ["/images/equipment/cyclone-separator.png", "/images/heater_shells.png", "/images/factory_building.png"]
       },
       {
         name: "Cyclone Separators",
         slug: "cyclone-separators",
         categorySlug: "msfe-project-equipment-products",
-        description: "High-efficiency cyclone separators for dust collection, gas cleaning, and material classification in industrial processes.",
+        description: "High-efficiency cyclone separators for dust collection, gas cleaning, and material classification.",
         images: ["/images/equipment/cyclone-separator.png", "/images/factory_building.png", "/images/heater_shells.png"]
       },
       {
@@ -148,27 +154,31 @@ export const categoriesData: CategoryData[] = [
         slug: "star-rollers",
         categorySlug: "msfe-project-equipment-products",
         description: "Precision star rollers for material handling and conveyor alignment in industrial processing plants.",
-        images: ["/images/msrl/rollers.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"]
+        images: [`${ARUL}/msrl-rollers/msrl_rollers.jpg`, "/images/equipment/cyclone-separator.png", "/images/factory_building.png"]
       },
       {
         name: "Intel & Flash Nozzles",
         slug: "intel-flash-nozzles",
         categorySlug: "msfe-project-equipment-products",
-        description: "Engineered inlet and flash nozzles for evaporators, heaters and pressure vessels with optimal flow characteristics.",
-        images: ["/images/equipment/cyclone-separator.png", "/images/heater_shells.png", "/images/msrl/pipes-fittings.png"]
+        description: "Engineered inlet and flash nozzles for evaporators, heaters and pressure vessels.",
+        images: ["/images/equipment/cyclone-separator.png", "/images/heater_shells.png", `${ARUL}/msrl-pipes-and-fittings/hydro_test_of_pipes_and_fittings.jpg`]
       },
       {
         name: "Pipes & Fittings",
         slug: "pipes-fittings",
         categorySlug: "msfe-project-equipment-products",
-        description: "Industrial-grade pipes and fittings fabricated for chemical processing, water treatment and heavy industrial applications.",
-        images: ["/images/msrl/pipes-fittings.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"]
+        description: "Industrial-grade pipes and fittings for chemical processing, water treatment and heavy industrial applications.",
+        images: [
+          `${ARUL}/msrl-pipes-and-fittings/hydro_test_of_pipes_and_fittings.jpg`,
+          `${ARUL}/msrl-pipes-and-fittings/special_exterior_painting_pipes.jpg`,
+          "/images/equipment/cyclone-separator.png"
+        ]
       },
       {
         name: "Rubber Gaskets & O-rings / Seal rings",
         slug: "rubber-gaskets-o-rings-seal-rings",
         categorySlug: "msfe-project-equipment-products",
-        description: "Precision-molded rubber gaskets, O-rings and seal rings for leak-proof sealing in high-pressure and chemical environments.",
+        description: "Precision-molded rubber gaskets, O-rings and seal rings for leak-proof sealing in high-pressure environments.",
         images: ["/images/moulded/orings-gaskets.png", "/images/rubbers/rubber-sheets.png", "/images/equipment/cyclone-separator.png"]
       }
     ]
@@ -184,27 +194,27 @@ export const categoriesData: CategoryData[] = [
         slug: "plain",
         categorySlug: "pulley-laggings",
         description: "Plain rubber pulley lagging for standard conveyor applications, providing improved belt grip and reduced slippage.",
-        images: ["/images/pulleys/pulley-lagging.png", "/images/msrl/rollers.png", "/images/material/belt-conveyor.png"]
+        images: ["/images/pulleys/pulley-lagging.png", `${ARUL}/msrl-rollers/msrl_rollers.jpg`, "/images/material/belt-conveyor.png"]
       },
       {
         name: "Grooved",
         slug: "grooved",
         categorySlug: "pulley-laggings",
         description: "Grooved pulley lagging with diamond pattern channels for water drainage in wet conveyor environments.",
-        images: ["/images/pulleys/pulley-lagging.png", "/images/msrl/rollers.png", "/images/material/belt-conveyor.png"]
+        images: ["/images/pulleys/pulley-lagging.png", "/images/material/belt-conveyor.png", `${ARUL}/msrl-rollers/msrl_rollers.jpg`]
       },
       {
         name: "Herringbone",
         slug: "herringbone",
         categorySlug: "pulley-laggings",
-        description: "Herringbone pattern pulley lagging providing superior water shedding and maximum belt traction in inclined conveyors.",
-        images: ["/images/pulleys/pulley-lagging.png", "/images/material/belt-conveyor.png", "/images/msrl/rollers.png"]
+        description: "Herringbone pattern pulley lagging providing superior water shedding and maximum belt traction.",
+        images: ["/images/pulleys/pulley-lagging.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"]
       },
       {
         name: "Ceramic",
         slug: "ceramic",
         categorySlug: "pulley-laggings",
-        description: "Ceramic-embedded pulley lagging for extreme-duty applications requiring maximum wear resistance and belt traction.",
+        description: "Ceramic-embedded pulley lagging for extreme-duty applications requiring maximum wear resistance.",
         images: ["/images/pulleys/pulley-lagging.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"]
       }
     ]
@@ -213,35 +223,52 @@ export const categoriesData: CategoryData[] = [
     id: "hoses",
     icon: "🌀",
     name: "Hoses",
-    desc: "Industrial hoses engineered for chemical transfer, dredging, and expansion applications.",
+    desc: "Industrial hoses for chemical transfer, dredging, and expansion applications.",
     items: [
       {
         name: "Acid Transfer",
         slug: "acid-transfer",
         categorySlug: "hoses",
-        description: "Acid-resistant flexible hoses for safe transfer of concentrated acids and aggressive chemicals in processing plants.",
-        images: ["/images/hoses/chemical-transfer.png", "/images/dredging_hoses.png", "/images/rubbers/rubber-sheets.png"]
+        description: "Acid-resistant flexible hoses for safe transfer of concentrated acids and aggressive chemicals.",
+        images: [
+          `${ARUL}/dredging-hoses/dredging_hose_1.jpg`,
+          `${ARUL}/dredging-hoses/suction_hose.jpg`,
+          "/images/hoses/chemical-transfer.png"
+        ]
       },
       {
         name: "Chemical Transfer",
         slug: "chemical-transfer",
         categorySlug: "hoses",
-        description: "Multi-purpose chemical transfer hoses rated for a wide range of industrial chemicals, solvents, and corrosive fluids.",
-        images: ["/images/hoses/chemical-transfer.png", "/images/dredging_hoses.png", "/images/factory_building.png"]
+        description: "Multi-purpose chemical transfer hoses rated for industrial chemicals, solvents, and corrosive fluids.",
+        images: [
+          `${ARUL}/dredging-hoses/dredging_hose_2.jpg`,
+          `${ARUL}/dredging-hoses/vacuum_hose.jpg`,
+          "/images/hoses/chemical-transfer.png"
+        ]
       },
       {
         name: "Dredging",
         slug: "dredging",
         categorySlug: "hoses",
         description: "Heavy-duty dredging hoses built for high-abrasion slurry transport in mining and marine dredging operations.",
-        images: ["/images/dredging_hoses.png", "/images/hoses/chemical-transfer.png", "/images/factory_building.png"]
+        images: [
+          `${ARUL}/dredging-hoses/dredging_hose_3.jpg`,
+          `${ARUL}/dredging-hoses/dredging_hose_4.jpg`,
+          `${ARUL}/dredging-hoses/dredging_hose_5.jpg`,
+          `${ARUL}/dredging-hoses/dredging_hose_6.jpg`
+        ]
       },
       {
         name: "Rubber Expansion Joints / Bellows",
         slug: "rubber-expansion-joints-bellows",
         categorySlug: "hoses",
-        description: "Flexible rubber expansion joints and bellows for absorbing thermal movement, vibration, and misalignment in piping systems.",
-        images: ["/images/hoses/chemical-transfer.png", "/images/dredging_hoses.png", "/images/msrl/pipes-fittings.png"]
+        description: "Flexible rubber expansion joints and bellows for absorbing thermal movement and vibration in piping systems.",
+        images: [
+          `${ARUL}/dredging-hoses/dredging_hose_7.jpg`,
+          `${ARUL}/dredging-hoses/suction_hose.jpg`,
+          "/images/hoses/chemical-transfer.png"
+        ]
       }
     ]
   },
@@ -255,21 +282,21 @@ export const categoriesData: CategoryData[] = [
         name: "O Rings",
         slug: "o-rings",
         categorySlug: "moulded-products",
-        description: "Precision-molded O-rings available in various elastomers for sealing applications across hydraulic, pneumatic, and chemical systems.",
+        description: "Precision-molded O-rings available in various elastomers for hydraulic, pneumatic, and chemical systems.",
         images: ["/images/moulded/orings-gaskets.png", "/images/rubbers/rubber-sheets.png", "/images/factory_building.png"]
       },
       {
         name: "Gaskets",
         slug: "gaskets",
         categorySlug: "moulded-products",
-        description: "Custom rubber gaskets engineered for leak-proof sealing in flanges, vessels, and equipment across diverse industrial applications.",
+        description: "Custom rubber gaskets for leak-proof sealing in flanges, vessels, and industrial equipment.",
         images: ["/images/moulded/orings-gaskets.png", "/images/rubbers/rubber-sheets.png", "/images/equipment/cyclone-separator.png"]
       },
       {
         name: "Buffers",
         slug: "buffers",
         categorySlug: "moulded-products",
-        description: "Heavy-duty rubber buffers and vibration dampeners for machinery mounting, dock bumpers, and impact absorption applications.",
+        description: "Heavy-duty rubber buffers and vibration dampeners for machinery mounting and impact absorption.",
         images: ["/images/moulded/orings-gaskets.png", "/images/rubbers/rubber-sheets.png", "/images/factory_building.png"]
       }
     ]
@@ -284,15 +311,19 @@ export const categoriesData: CategoryData[] = [
         name: "Grades",
         slug: "grades",
         categorySlug: "rubbers",
-        description: "Wide range of specialty rubber grades including Natural Rubber, Neoprene, EPDM, Nitrile, Butyl, and Hypalon for diverse industrial applications.",
-        images: ["/images/rubbers/rubber-sheets.png", "/images/msrl/rubber-lining.png", "/images/factory_building.png"]
+        description: "Wide range of specialty rubber grades including Natural Rubber, Neoprene, EPDM, Nitrile, Butyl, and Hypalon.",
+        images: ["/images/rubbers/rubber-sheets.png", `${ARUL}/msrl-rubber-lining/MSRL_saturator_inside_rubber_lined.jpg`, "/images/factory_building.png"]
       },
       {
         name: "Lining Services",
         slug: "lining-services",
         categorySlug: "rubbers",
-        description: "Expert rubber lining application services including surface preparation, adhesive bonding, and quality testing for industrial equipment.",
-        images: ["/images/rubbers/rubber-sheets.png", "/images/site/site-rubber-lining.png", "/images/msrl/rubber-lining.png"]
+        description: "Expert rubber lining application including surface preparation, adhesive bonding, and quality testing.",
+        images: [
+          `${ARUL}/site-rubber-lining/FACT-Fabrication-progress-of-phosphoric-acid-tank-at-site.jpg`,
+          `${ARUL}/site-rubber-lining/Phosphoric-Acid-Tank-rubber-lined-at-site-01.jpg`,
+          "/images/rubbers/rubber-sheets.png"
+        ]
       }
     ]
   },
@@ -305,50 +336,50 @@ export const categoriesData: CategoryData[] = [
       {
         title: "Turn-Key Projects",
         items: [
-          { name: "Fuel Handling Systems", slug: "fuel-handling-systems", categorySlug: "material-handling", description: "Complete fuel handling and storage systems for power plants and industrial facilities, including conveyors, crushers, and storage infrastructure.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/equipment/cyclone-separator.png"] },
-          { name: "Ash Handling Systems", slug: "ash-handling-systems", categorySlug: "material-handling", description: "Turnkey ash handling systems for thermal power plants, including ash conveyors, silos, and disposal infrastructure.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] }
+          { name: "Fuel Handling Systems", slug: "fuel-handling-systems", categorySlug: "material-handling", description: "Complete fuel handling and storage systems for power plants and industrial facilities.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/equipment/cyclone-separator.png"] },
+          { name: "Ash Handling Systems", slug: "ash-handling-systems", categorySlug: "material-handling", description: "Turnkey ash handling systems for thermal power plants.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] }
         ]
       },
       {
         title: "Conveyors",
         items: [
-          { name: "Belt", slug: "belt-conveyor", categorySlug: "material-handling", description: "Standard belt conveyors for bulk material transport in mining, quarrying, and industrial manufacturing.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
-          { name: "Shuttle", slug: "shuttle-conveyor", categorySlug: "material-handling", description: "Shuttle conveyors for controlled distribution of materials across multiple discharge points.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/pulleys/pulley-lagging.png"] },
-          { name: "Tripper", slug: "tripper-conveyor", categorySlug: "material-handling", description: "Tripper conveyors for precise material discharge at multiple locations along the conveyor path.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
-          { name: "Screw", slug: "screw-conveyor", categorySlug: "material-handling", description: "Screw conveyors for moving granular and semi-solid materials in enclosed environments.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
-          { name: "Side-Wall Belt", slug: "side-wall-belt", categorySlug: "material-handling", description: "Side-wall belt conveyors for steep incline material transport without spillage.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
-          { name: "Slat Chain", slug: "slat-chain", categorySlug: "material-handling", description: "Slat chain conveyors for handling heavy, bulky items in manufacturing and assembly lines.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/equipment/cyclone-separator.png"] },
-          { name: "Portable Bag", slug: "portable-bag", categorySlug: "material-handling", description: "Portable bag conveyors for flexible loading and unloading of bagged materials.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/pulleys/pulley-lagging.png"] }
+          { name: "Belt", slug: "belt-conveyor", categorySlug: "material-handling", description: "Standard belt conveyors for bulk material transport in mining and manufacturing.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
+          { name: "Shuttle", slug: "shuttle-conveyor", categorySlug: "material-handling", description: "Shuttle conveyors for controlled distribution across multiple discharge points.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/pulleys/pulley-lagging.png"] },
+          { name: "Tripper", slug: "tripper-conveyor", categorySlug: "material-handling", description: "Tripper conveyors for precise material discharge at multiple locations.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
+          { name: "Screw", slug: "screw-conveyor", categorySlug: "material-handling", description: "Screw conveyors for moving granular and semi-solid materials.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
+          { name: "Side-Wall Belt", slug: "side-wall-belt", categorySlug: "material-handling", description: "Side-wall belt conveyors for steep incline material transport.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
+          { name: "Slat Chain", slug: "slat-chain", categorySlug: "material-handling", description: "Slat chain conveyors for handling heavy, bulky items.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/equipment/cyclone-separator.png"] },
+          { name: "Portable Bag", slug: "portable-bag", categorySlug: "material-handling", description: "Portable bag conveyors for flexible loading and unloading.", images: ["/images/material/belt-conveyor.png", "/images/factory_building.png", "/images/pulleys/pulley-lagging.png"] }
         ]
       },
       {
         title: "Feeders",
         items: [
-          { name: "Drag Chain", slug: "drag-chain-feeder", categorySlug: "material-handling", description: "Drag chain feeders for controlled extraction of bulk materials from hoppers and silos.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
-          { name: "Belt Feeder", slug: "belt-feeder", categorySlug: "material-handling", description: "Belt feeders for precise volumetric feeding of materials from storage to processing.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
-          { name: "Screw Feeder", slug: "screw-feeder", categorySlug: "material-handling", description: "Screw feeders for controlled metering and feeding of granular materials into processing equipment.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] }
+          { name: "Drag Chain", slug: "drag-chain-feeder", categorySlug: "material-handling", description: "Drag chain feeders for controlled extraction of bulk materials.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
+          { name: "Belt Feeder", slug: "belt-feeder", categorySlug: "material-handling", description: "Belt feeders for precise volumetric feeding of materials.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
+          { name: "Screw Feeder", slug: "screw-feeder", categorySlug: "material-handling", description: "Screw feeders for controlled metering of granular materials.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] }
         ]
       },
       {
         title: "Spares",
         items: [
-          { name: "Idlers", slug: "idlers", categorySlug: "material-handling", description: "Conveyor idlers and roller assemblies for belt support and tracking.", images: ["/images/msrl/rollers.png", "/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png"] },
-          { name: "Pulleys", slug: "pulleys", categorySlug: "material-handling", description: "Conveyor pulleys including drive, tail, bend, and snub pulleys with optional lagging.", images: ["/images/pulleys/pulley-lagging.png", "/images/material/belt-conveyor.png", "/images/msrl/rollers.png"] },
-          { name: "Internal Scrapper", slug: "internal-scrapper", categorySlug: "material-handling", description: "Internal belt scrappers for cleaning conveyor belts and preventing material carryback.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
-          { name: "External Scrapper", slug: "external-scrapper", categorySlug: "material-handling", description: "External belt scrappers positioned at discharge pulleys for efficient material removal.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
-          { name: "Rack and Pinion Gate", slug: "rack-and-pinion-gate", categorySlug: "material-handling", description: "Rack and pinion gates for controlled material flow regulation in hoppers and chutes.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] },
-          { name: "Rod Gate", slug: "rod-gate", categorySlug: "material-handling", description: "Rod gates for on/off flow control in material handling chutes and bins.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] },
-          { name: "Screw Gate", slug: "screw-gate", categorySlug: "material-handling", description: "Screw gates providing precise flow control for fine materials in processing plants.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] }
+          { name: "Idlers", slug: "idlers", categorySlug: "material-handling", description: "Conveyor idlers and roller assemblies for belt support.", images: [`${ARUL}/msrl-rollers/msrl_rollers.jpg`, "/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png"] },
+          { name: "Pulleys", slug: "pulleys", categorySlug: "material-handling", description: "Conveyor pulleys with optional lagging.", images: ["/images/pulleys/pulley-lagging.png", "/images/material/belt-conveyor.png", `${ARUL}/msrl-rollers/msrl_rollers.jpg`] },
+          { name: "Internal Scrapper", slug: "internal-scrapper", categorySlug: "material-handling", description: "Internal belt scrappers for cleaning conveyor belts.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
+          { name: "External Scrapper", slug: "external-scrapper", categorySlug: "material-handling", description: "External belt scrappers for efficient material removal.", images: ["/images/material/belt-conveyor.png", "/images/pulleys/pulley-lagging.png", "/images/factory_building.png"] },
+          { name: "Rack and Pinion Gate", slug: "rack-and-pinion-gate", categorySlug: "material-handling", description: "Rack and pinion gates for controlled material flow.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] },
+          { name: "Rod Gate", slug: "rod-gate", categorySlug: "material-handling", description: "Rod gates for on/off flow control.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] },
+          { name: "Screw Gate", slug: "screw-gate", categorySlug: "material-handling", description: "Screw gates for precise flow control.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] }
         ]
       },
       {
         title: "Others",
         items: [
-          { name: "Bucket Elevator", slug: "bucket-elevator", categorySlug: "material-handling", description: "Bucket elevators for vertical transport of bulk materials in cement, mining, and grain industries.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
-          { name: "Vibrating Feeder", slug: "vibrating-feeder", categorySlug: "material-handling", description: "Vibrating feeders for controlled material feeding from hoppers to processing equipment.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
-          { name: "Vibrating Screen (Circular & Linear)", slug: "vibrating-screen-circular-linear", categorySlug: "material-handling", description: "Circular and linear vibrating screens for size classification and dewatering of bulk materials.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
-          { name: "Crusher (Hammer Mills)", slug: "crusher-hammer-mills", categorySlug: "material-handling", description: "Hammer mill crushers for size reduction of coal, limestone, and other bulk materials.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] },
-          { name: "Mild & Stainless Steel Fabrications", slug: "mild-stainless-steel-fabrications", categorySlug: "material-handling", description: "Custom MS and SS fabrications including chutes, hoppers, tanks, and structural supports for material handling plants.", images: ["/images/factory_building.png", "/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png"] }
+          { name: "Bucket Elevator", slug: "bucket-elevator", categorySlug: "material-handling", description: "Bucket elevators for vertical transport of bulk materials.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
+          { name: "Vibrating Feeder", slug: "vibrating-feeder", categorySlug: "material-handling", description: "Vibrating feeders for controlled material feeding.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
+          { name: "Vibrating Screen (Circular & Linear)", slug: "vibrating-screen", categorySlug: "material-handling", description: "Circular and linear vibrating screens for size classification.", images: ["/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png", "/images/factory_building.png"] },
+          { name: "Crusher (Hammer Mills)", slug: "crusher-hammer-mills", categorySlug: "material-handling", description: "Hammer mill crushers for size reduction of bulk materials.", images: ["/images/equipment/cyclone-separator.png", "/images/material/belt-conveyor.png", "/images/factory_building.png"] },
+          { name: "Mild & Stainless Steel Fabrications", slug: "mild-stainless-steel-fabrications", categorySlug: "material-handling", description: "Custom MS and SS fabrications for material handling plants.", images: ["/images/factory_building.png", "/images/material/belt-conveyor.png", "/images/equipment/cyclone-separator.png"] }
         ]
       }
     ]

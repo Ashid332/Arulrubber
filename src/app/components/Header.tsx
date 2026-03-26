@@ -32,7 +32,13 @@ export function Header() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="flex items-center"
           >
-            <h1 className="text-2xl font-bold text-red-500">ARUL RUBBERS</h1>
+            <Link to="/">
+              <img 
+                src="/images/arul-rubbers-logo.png" 
+                alt="Arul Rubbers Private Limited" 
+                className="h-10 sm:h-12 w-auto object-contain"
+              />
+            </Link>
           </motion.div>
 
           {/* Desktop Navigation */}
