@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 
 export function Hero() {
   return (
-    <section id="home" className="relative h-[600px] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-[600px] flex items-center justify-center overflow-hidden pt-24">
       {/* Background Image with Overlay */}
       <motion.div
         initial={{ scale: 1.2, opacity: 0 }}

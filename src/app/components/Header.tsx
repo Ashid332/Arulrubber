@@ -21,7 +21,7 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="bg-[#1e3a8a] text-white sticky top-0 z-50 shadow-lg"
+      className="fixed top-0 w-full z-50 bg-white text-[#1e3a8a] shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between items-center py-2">
@@ -48,14 +48,14 @@ export function Header() {
                 {item === "Home" || item === "Products" ? (
                   <Link
                     to={item === "Home" ? "/" : "/products"}
-                    className="text-white hover:text-red-400 transition-colors duration-300 py-2 inline-block font-medium uppercase text-xs"
+                    className="text-[#1e3a8a] hover:text-red-600 transition-colors duration-300 py-2 inline-block font-bold uppercase text-xs"
                   >
                     {item}
                   </Link>
                 ) : (
                   <Link
                     to={item === "About Us" ? "/corporate-info" : item === "Industries" ? "/industries" : item === "Facilities" ? "/facilities" : item === "R & D" ? "/research-and-development" : item === "Clients" ? "/clients" : item === "News" ? "/news" : item === "Enquiry" ? "/enquiry" : item === "Contact Us" ? "/contact-us" : `#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="text-white hover:text-red-400 transition-colors duration-300 py-2 inline-block font-medium uppercase text-xs"
+                    className="text-[#1e3a8a] hover:text-red-600 transition-colors duration-300 py-2 inline-block font-bold uppercase text-xs"
                   >
                     {item}
                   </Link>
@@ -84,7 +84,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <motion.button
             whileTap={{ scale: 0.9 }}
-            className="md:hidden text-white"
+            className="md:hidden text-[#1e3a8a]"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -99,14 +99,14 @@ export function Header() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden pb-4 overflow-hidden"
+              className="md:hidden pb-4 bg-white overflow-hidden"
             >
               {navItems.map((item, index) => (
                 <div key={item}>
                   {item === "Home" || item === "Products" ? (
                     <Link
                       to={item === "Home" ? "/" : "/products"}
-                      className="block py-2 text-white hover:text-red-400 font-medium transition-colors duration-300"
+                      className="block py-2 text-[#1e3a8a] hover:text-red-600 font-bold transition-colors duration-300"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item}
@@ -119,7 +119,7 @@ export function Header() {
                     >
                       <Link
                         to={item === "About Us" ? "/corporate-info" : item === "Industries" ? "/industries" : item === "Facilities" ? "/facilities" : item === "R & D" ? "/research-and-development" : item === "Clients" ? "/clients" : item === "News" ? "/news" : item === "Enquiry" ? "/enquiry" : item === "Contact Us" ? "/contact-us" : `#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="block py-2 text-white hover:text-red-400 transition-colors duration-300"
+                        className="block py-2 text-[#1e3a8a] hover:text-red-600 font-bold transition-colors duration-300"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {item}
