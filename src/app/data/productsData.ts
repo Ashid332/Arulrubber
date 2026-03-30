@@ -362,13 +362,13 @@ export const categoriesData: CategoryData[] = [
       {
         title: "Spares",
         items: [
-          { name: "Idlers", slug: "idlers", categorySlug: "material-handling", description: "Conveyor idlers and roller assemblies for belt support.", images: ["/images/material-handling/spares/idlers_1.jpg", "/images/material-handling/spares/idlers_2.jpg"] },
-          { name: "Pulleys", slug: "pulleys", categorySlug: "material-handling", description: "Conveyor pulleys with optional lagging.", images: ["/images/material-handling/spares/pulleys_1.jpg", "/images/material-handling/spares/pulleys_2.jpg"] },
-          { name: "Internal Scrapper", slug: "internal-scrapper", categorySlug: "material-handling", description: "Internal belt scrappers for cleaning conveyor belts.", images: ["/images/material-handling/spares/internal_scrapper_1.jpg", "/images/material-handling/spares/internal_scrapper_2.jpg"] },
-          { name: "External Scrapper", slug: "external-scrapper", categorySlug: "material-handling", description: "External belt scrappers for efficient material removal.", images: ["/images/material-handling/spares/external_scrapper_1.jpg", "/images/material-handling/spares/external_scrapper_2.jpg"] },
-          { name: "Rack and Pinion Gate", slug: "rack-and-pinion-gate", categorySlug: "material-handling", description: "Rack and pinion gates for controlled material flow.", images: ["/images/material-handling/spares/rack_pinion_gate_1.jpg", "/images/material-handling/spares/rack_pinion_gate_2.jpg"] },
-          { name: "Rod Gate", slug: "rod-gate", categorySlug: "material-handling", description: "Rod gates for on/off flow control.", images: ["/images/material-handling/spares/rod_gate_1.jpg", "/images/material-handling/spares/rod_gate_2.jpg"] },
-          { name: "Screw Gate", slug: "screw-gate", categorySlug: "material-handling", description: "Screw gates for precise flow control.", images: ["/images/material-handling/spares/screw_gate_1.jpg", "/images/material-handling/spares/screw_gate_2.jpg"] }
+          { name: "Idlers", slug: "idlers", categorySlug: "material-handling", description: "Conveyor idlers and roller assemblies for belt support.", images: ["/images/material-handling/spares/idler1.jpg", "/images/material-handling/spares/idler2.jpg"] },
+          { name: "Pulleys", slug: "pulleys", categorySlug: "material-handling", description: "Conveyor pulleys with optional lagging.", images: ["/images/material-handling/spares/pulley1.jpg", "/images/material-handling/spares/pulley2.jpg"] },
+          { name: "Internal Scrapper", slug: "internal-scrapper", categorySlug: "material-handling", description: "Internal belt scrappers for cleaning conveyor belts.", images: ["/images/material-handling/spares/internal_scrapper1.jpg", "/images/material-handling/spares/internal_scrapper2.jpg"] },
+          { name: "External Scrapper", slug: "external-scrapper", categorySlug: "material-handling", description: "External belt scrappers for efficient material removal.", images: ["/images/material-handling/spares/external_scrapper1.jpg", "/images/material-handling/spares/external_scrapper2.jpg"] },
+          { name: "Rack and Pinion Gate", slug: "rack-and-pinion-gate", categorySlug: "material-handling", description: "Rack and pinion gates for controlled material flow.", images: ["/images/material-handling/spares/rack_pinion_gate1.jpg", "/images/material-handling/spares/rack_pinion_gate2.jpg"] },
+          { name: "Rod Gate", slug: "rod-gate", categorySlug: "material-handling", description: "Rod gates for on/off flow control.", images: ["/images/material-handling/spares/rod_gate1.jpg", "/images/material-handling/spares/rod_gate2.jpg"] },
+          { name: "Screw Gate", slug: "screw-gate", categorySlug: "material-handling", description: "Screw gates for precise flow control.", images: ["/images/material-handling/spares/screw_gate1.jpg", "/images/material-handling/spares/screw_gate2.jpg"] }
         ]
       },
       {
